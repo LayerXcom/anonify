@@ -41,7 +41,7 @@ async fn main() -> io::Result<()> {
     HttpServer::new(move || {
         App::new()
             .wrap(RequestTracing::new())
-            .data(server.clone())
+            .app_data(server.clone())
             .route("/api/v1/health", web::get().to(handle_health_check))
             .route("/api/v1/state", web::post().to(handle_send_command))
             .route("/api/v1/state", web::get().to(handle_get_state))

@@ -13,5 +13,5 @@ cargo build
 
 echo 'build Anonify_common_t.o'
 cd ${ANONIFY_ROOT}/scripts
-make DEBUG=1 ENCLAVE_DIR=example/erc20/enclave/erc20 ENCLAVE_PKG_NAME=erc20 ../build/Anonify_common_t.o
-make DEBUG=1 TEST=1 ENCLAVE_DIR=example/erc20/enclave/erc20 ENCLAVE_PKG_NAME=erc20 ../build/Anonify_test_t.o
+make DEBUG=1 ENCLAVE_DIR=example/erc20/enclave ENCLAVE_PKG_NAME=erc20 ../build/Anonify_common_t.o
+make DEBUG=1 TEST=1 ENCLAVE_DIR=example/erc20/enclave ENCLAVE_PKG_NAME=erc20 ../build/Anonify_test_t.o

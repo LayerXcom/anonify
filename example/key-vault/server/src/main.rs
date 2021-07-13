@@ -24,7 +24,7 @@ async fn main() -> io::Result<()> {
 
     HttpServer::new(move || {
         App::new()
-            .data(server.clone())
+            .app_data(server.clone())
             .route("/api/v1/health", web::get().to(handle_health_check))
     })
     .bind(my_node_url)?

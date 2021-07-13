@@ -12,8 +12,8 @@ frame-host = { path = "../../../frame/host" }
 frame-common = { path = "../../../frame/common" }
 frame-config = { path = "../../../frame/config" }
 sgx_types = "1.1.1"
-actix-web = "3"
-actix-rt = "1.1"
+actix-web = "4.0.0-beta.1"
+actix-rt = "2.2"
 failure = "0.1"
 tracing = "0.1"
 tracing-subscriber = "0.2"

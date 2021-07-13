@@ -86,7 +86,7 @@ where
                         curr_tries + 1,
                         res
                     );
-                    actix_rt::time::delay_for(delay).await;
+                    actix_rt::time::sleep(delay).await;
                 } else {
                     // if it overs the number of retries
                     return res;
