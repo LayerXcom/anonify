@@ -125,7 +125,7 @@ impl QuoteTarget {
 
     /// Create quote with attestation key ID and enclave's local report.
     pub fn create_quote(self, spid: &str) -> Result<EncodedQuote> {
-        const RET_QUOTE_BUF_LEN: u32 = 2048;
+        const RET_QUOTE_BUF_LEN: u32 = 2800; // 2048;
         let mut rt = UntrustedStatus::default();
         let mut quote = vec![0u8; RET_QUOTE_BUF_LEN as usize];
         let mut quote_len: u32 = 0;
