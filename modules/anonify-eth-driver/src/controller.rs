@@ -6,7 +6,7 @@ use frame_common::{
 use frame_host::ecall_controller::*;
 use frame_sodium::SodiumCiphertext;
 
-pub const EI_MAX_SIZE: usize = 4096; // 2048;
+pub const EI_MAX_SIZE: usize = 1024;// 4096; // 2048;
 
 pub struct CommandController;
 
