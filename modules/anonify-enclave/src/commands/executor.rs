@@ -124,6 +124,8 @@ where
     // The padding works for fixing the ciphertext size so that
     // other people cannot distinguish what state is encrypted based on the size.
     fn append_padding(buf: &mut Vec<u8>, cmd_cipher_padding_size: usize) {
+        println!("##### buf.len(): {:?}", buf.len());
+        println!("##### cmd_cipher_padding_size: {:?}", cmd_cipher_padding_size);
         let padding_size = cmd_cipher_padding_size - buf.len();
         let padding = vec![0u8; padding_size];
         buf.extend_from_slice(&padding);
