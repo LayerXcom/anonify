@@ -8,7 +8,7 @@ pub use state_runtime_enclave_use_case::StateRuntimeEnclaveUseCase;
 
 use anyhow::anyhow;
 use bincode::Options;
-use log::{error, debug};
+use log::error;
 use std::{format, ptr};
 
 fn mk_input_ecall_entry_point<EI>(
@@ -38,7 +38,6 @@ where
     let ser_out = bincode::serialize(&enclave_output)?;
 
     let ser_out_len = ser_out.len();
-    debug!("##### ser_out_len: {:?}", ser_out_len);
     *output_len = ser_out_len;
 
     if ser_out_len > ecall_max_size {
