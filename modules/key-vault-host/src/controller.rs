@@ -1,7 +1,7 @@
 use frame_host::ecall_controller::*;
 use key_vault_ecall_types::*;
 
-pub const EI_MAX_SIZE: usize = 2504; // 2048;
+pub const EI_MAX_SIZE: usize = 2800; // 2048;
 
 pub struct StartServerController;
 
